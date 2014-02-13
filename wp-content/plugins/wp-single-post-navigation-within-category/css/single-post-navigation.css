@@ -1,0 +1,70 @@
+/*
+	Plugin: WP Single Post Navigation - Stylesheet
+	Version: 1.1
+	Author: David Decker - DECKERWEB
+	Author URI: http://deckerweb.de/
+*/
+
+/* Table of Contents
+
+* Main Container for the Prev & Next Links
+* Prev & Next Links Style
+* CSS3 Media Query
+
+*/
+
+/* Main Container for the Prev & Next Links
+------------------------------------------------------------ */
+
+.wpspn-area {
+}
+
+
+/* Prev & Next Links Style
+------------------------------------------------------------ */
+
+#wpspn-nextpost a,
+#wpspn-prevpost a {
+	color: #999;  /* link color */
+	border-top: 1px dotted #ccc;  /* top border for link container */
+	border-bottom: 1px dotted #ccc;  /* bottom border for link container */
+	font-size: 100px;
+	line-height: 105px;
+	padding-bottom: 15px;
+	top: 42%;
+	width: 80px;
+	position: fixed;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#wpspn-nextpost a:hover,
+#wpspn-prevpost a:hover {
+	color: #666;  /* mouse hover link color */
+	text-decoration: none;
+}
+
+#wpspn-nextpost a {
+	right: 10px;
+}
+
+#wpspn-prevpost a {
+	left: 10px;
+}
+
+_#wpspn-nextpost a,
+_#wpspn-prevpost a {
+	position: absolute;
+}
+
+
+/* CSS3 Media Query - Hide from smaller displays/ viewports
+------------------------------------------------------------ */
+
+@media screen and (max-width: 1024px) {
+	.wpspn-area,
+	#wpspn-nextpost,
+	#wpspn-prevpost {
+		display: none;
+	}
+}

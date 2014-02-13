@@ -1,0 +1,9 @@
+#wpspn-prevpost a,#wpspn-nextpost a,#wpspn-prevpost-reverse a,#wpspn-nextpost-reverse a{border-bottom:1px dotted #ccc;border-top:1px dotted #ccc;color:#999;font-size:100px;line-height:105px;padding-bottom:15px;position:fixed;text-align:center;top:42%;vertical-align:middle;width:80px}
+#wpspn-prevpost a:hover,#wpspn-nextpost a:hover,#wpspn-prevpost-reverse a:hover,#wpspn-nextpost-reverse a:hover{color:#666;text-decoration:none}
+_#wpspn-prevpost a,_#wpspn-nextpost a,_#wpspn-prevpost-reverse a,_#wpspn-nextpost-reverse a{position:absolute}
+#site-generator #wpspn-nextpost a,#site-generator #wpspn-prevpost a,#site-generator #wpspn-nextpost-reverse a,#site-generator #wpspn-prevpost-reverse a{background:0 none!important}
+#wpspn-prevpost a,#wpspn-nextpost-reverse a{right:10px}
+#wpspn-nextpost a,#wpspn-prevpost-reverse a{left:10px}
+@media only screen and max-width 1100px {
+.wpspn-area,#wpspn-prevpost,#wpspn-nextpost,#wpspn-prevpost-reverse,#wpspn-nextpost-reverse{display:none}
+}
