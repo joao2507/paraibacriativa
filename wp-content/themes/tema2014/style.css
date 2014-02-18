@@ -1,0 +1,306 @@
+/*
+Theme Name: ParaibaCriativa
+Theme URI: http://www.bossacriativa.com.br/
+Description: Tema padrão para o projeto paraiba criativa
+Author: bossacriativa
+Author URI: http://www.bossacriativa.com.br/
+Version: 2.0
+
+*/
+html { font-size: 62.5%; }
+body{
+    font: normal 100% 'Quicksand', sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    border-top: #203a71 20px solid;
+    background: url('img/bg.png');
+    color: #444;
+}
+
+@media (min-width: 10px) {
+    html { font-size: 160%; }
+}
+
+@media (min-width: 700px) {
+    html { font-size: 170%; }
+}
+
+@media (min-width: 900px) {
+    html { font-size: 180%; }
+}
+
+@media (min-width: 1024px) {
+    html { font-size: 190%; }
+}
+
+@media (min-width: 1200px) {
+    html { font-size: 200%; }
+}
+
+.row.full-width {
+    width: 100%;
+    max-width: 100%;
+}
+header{background: url(img/bg-header.png) no-repeat right top;}
+header h1{background: url(img/logo-s.png) no-repeat center top;width: 100%;height: 88px;}
+@media (min-width: 900px) {
+    header h1{background: url(img/logo-m.png) no-repeat center top;width: 218px;height: 108px;}
+}
+
+@media (min-width: 1200px) {
+    header h1{background: url(img/logo.png) no-repeat;width: 279px;height: 137px;}
+}
+
+
+header span#titulo{letter-spacing: -0.08em;color: #00aeef;font-weight: bold;font-size: 0.9em;display: block;text-align: center;margin-top: 20px;}
+header span#subtitulo{letter-spacing: -0.08em;display:block;margin-top: 10px;font-size: 0.7em;font-weight: 700;color: #203a71;text-align: center;}
+header span#antetitulo{letter-spacing: -0.08em;display:block;margin-top: 5px;font-size: 0.5em;font-weight: 700;color: #203a71;line-height: 1.3em;text-align: center;}
+#slogan{font-size: 0.6em;margin: 10px 0;background-color: #8dd8f8;color: #203a71;padding: 0.55em 0;text-align: center;}
+
+nav#menu-superior ul{margin-left: 0 !important;}
+nav#menu-superior li{letter-spacing: -0.08em;border-right: #6d6e71 1px solid;padding-right: 24px;margin-right: 24px;font-weight: bold;font-size: 0.6em;float: left;display: inline;}
+nav#menu-superior a{color: #6d6e71;text-decoration: none;}
+nav#menu-superior a:hover{color: #999;}
+
+div.barra{background: #6d6e71 url(img/bg-barra.png);width: 100%;height: 6px;margin-top: 0;margin-bottom: 20px;}
+
+#carrossel{margin-top: 20px;position: relative;}
+#carrossel-control{
+    position: absolute;
+    top: 10px;
+    right: 1.3em;
+    z-index: 99999;
+    padding: 0;
+    font-family: Helvetica, Tahoma,sans-serif;
+}
+#carrossel-control a{
+    color: #17469e;
+    background-color: #fff;
+    font-size: 13px;
+    margin-left: 5px;
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    text-align: center;
+    border: #ddd 1px solid;
+    font-weight: bold;
+}
+#carrossel-control a.active{
+    color: #fff;
+    background-color: #0099cd;
+}
+#carrossel .orbit-caption{
+    font: 17px/18px Helvetica,Tahoma,sans-serif;
+}
+#carrossel .orbit-caption a{color: #fff;}
+
+#agenda{}
+#agenda-content{margin-top: 10px;background-color: #e6e7e8;}
+#agenda div.agenda-dia{
+    background-image: -ms-linear-gradient(top, #0077AC 0%, #00A6E4 50%, #0077AC 100%);
+    background-image: -moz-linear-gradient(top, #0077AC 0%, #00A6E4 50%, #0077AC 100%);
+    background-image: -o-linear-gradient(top, #0077AC 0%, #00A6E4 50%, #0077AC 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0077AC), color-stop(0.5, #00A6E4), color-stop(1, #0077AC));
+    background-image: -webkit-linear-gradient(top, #0077AC 0%, #00A6E4 50%, #0077AC 100%);
+    background-image: linear-gradient(to bottom, #0077AC 0%, #00A6E4 50%, #0077AC 100%);
+    color: #fff;
+    width: 30px;
+    display: block;
+    margin: .7em .7em;
+    font: 13px Helvetica,Tahoma,sans-serif;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    float:left;padding: 1em 0;
+}
+#agenda li{
+    padding-bottom: 0;
+}
+#agenda h3{
+    margin: 1em 0;
+    font-size: .39em;
+    font-weight: bold;
+    line-height: 1em;
+}
+#agenda h3 a{color: #0077AC;}
+
+h2.titulo{
+    border-left: #00aeef 12px solid;
+    padding-left: 4px;
+    font-size: .465em;
+    display: block;text-transform: uppercase;
+    font-weight: bold;
+    color: #0073a6;
+    background-color: inherit;
+    text-transform: uppercase;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    line-height: 1.2em;
+}
+h2.titulo.box-titulo{
+    margin-bottom: 20px;
+}
+
+#parceiros{}
+#parceiros ul{margin: 20px 0 0 0;}
+#parceiros ul li{height: 117px;text-indent: -99999px;float: left;margin-right: .4rem;margin-left: .4rem;padding: 92px 0;}
+#parceiros ul li a{width: 100%;height: 100%;display: block;}
+#parceiros ul li.pos{width: 119px;background: url(img/temp/logo-parceiro-pos.jpg) no-repeat center center;}
+#parceiros ul li.capes{width: 88px;background: url(img/temp/logo-parceiro-capes.jpg) no-repeat center center;}
+#parceiros ul li.mec{width: 278px;background: url(img/temp/logo-parceiro-mec.jpg) no-repeat center center;}
+#parceiros ul li.ufpb{width: 77px;background: url(img/temp/logo-parceiro-ufpb.jpg) no-repeat center center;}
+
+#banner-destaque{margin-top: 20px;}
+
+#home{}
+
+#noticias{}
+#noticias ul{margin-left: 0;list-style: none;margin-bottom: 0;}
+#noticias ul li{border-top: #d3d8d7 2px solid;padding-top: 5px;margin-top: 10px;}
+#noticias h3{font-size: 0.5em;font-weight: bold;}
+#noticias h3 a{color: #333;}
+#noticias p{font-size: 0.4em;margin-bottom: 0;line-height: 1.35em;}
+
+footer{margin-top: 30px !important;background: #203a71 url(img/bg-footer.png) no-repeat center top;min-height: 160px;}
+footer nav.redes{position: relative;/* top:30px; */}
+footer nav.redes ul{position: absolute;top: 20px; right: 20px;}
+footer nav.redes li{background: url(img/sprite-redes.png);height: 19px;margin-right: 8px;float: left;/* text-indent: -999999px; */}
+footer nav.redes li.twitter{background-position: 0 -25px;width: 15px;}
+footer nav.redes li.facebook{background-position: -24px -25px;width: 20px;}
+footer nav.redes li.youtube{background-position: -52px -25px;width: 17px;}
+footer nav.redes li.instagram{background-position: -77px -25px;width: 21px;}
+
+footer nav.redes li a{display: block;width: 100%;height: 100%;text-indent: -9999999px;z-index: 9999999;}
+
+footer h1{background: url(img/logo-footer.png) no-repeat;width: 122px;height: 61px;position: relative;top: 20px;}
+footer #subtitulo{top: 15px;color: #fff;position: relative;font-size:11px;font-weight: 700;display: block;width: 150px;line-height: 1.2em;letter-spacing: -0.08em;}
+footer #antetitulo{top: 15px;color: #fff;position: relative;font-size:10px;display: block;width: 160px;line-height: 1.2em;letter-spacing: -0.08em;}
+
+footer nav#menu-footer{/* float:right; *//* width: 640px; *//* position: relative; *//* top: 11px; */}
+footer nav#menu-footer ul{margin-bottom: 0;margin-left: 0;margin-top: 36px;}
+footer nav#menu-footer li{font-weight: 700;font-size: 12px;float: left;display: inline;margin-right: 12px;text-transform: uppercase;}
+footer nav#menu-footer a{color: #fff;}
+
+footer #menu-colorido-footer{
+    max-width: 800px;
+}
+footer #menu-colorido-footer ul{margin-bottom: 0;margin-left: 0;margin-top: 12px;}
+footer #menu-colorido-footer li{float: left;display: inline;margin-right: 16px;font-size: 11px;margin-bottom: 4px;text-transform: uppercase;}
+footer #menu-colorido-footer li a{color: #fff;}
+
+/* INTERNAS */
+#page{background-color: #fff;min-height: 825px;}
+#page .page-container{padding: 20px;}
+#page h2{
+    background-color: #17469e;
+    color: #fff;
+    padding: 6px 4px 6px 20px;
+    font-size: 30px;
+    position: relative;
+}
+#page h3{
+    position: relative;
+    top: -20px;
+    left: -20px;
+}
+#page p{font-size: 15px;line-height: 1.3em;font-family: Tahoma, Arial,sans-serif;letter-spacing: -0.03em;}
+aside h3{
+    border-left: #00aeef 12px solid;
+    padding-left: 4px;
+    font-size: .465em;
+    display: block;text-transform: uppercase;
+    font-weight: bold;
+    color: #6d6e71;
+    line-height: 1.3em;
+}
+aside #searchform{margin-top: 20px;}
+aside #searchform .screen-reader-text{font-size: 1.5em;color: #6d6e71;display: block;}
+aside #searchform #s{padding: .2em .2em;height: 35px;font-size: 0.6em;margin-bottom: 0;}
+aside #submitformbutton{
+    height: 35px;
+    line-height: 35px;
+    font-size: 0.5em;
+    font-weight: 300 !important;
+    margin-bottom: 0;
+}
+
+#page article h3{color: #203a71;top:inherit;left:inherit;position: inherit;}
+#page article p{font-family: Arial, sans-serif;line-height: 1.3em;}
+#filtro{float: left;margin-right: 5px;width: 380px;}
+#link-emptyfilter{position: relative;top: 15px;font-family: Tahoma, sans-serif;font-size: 12px;color: cornflowerblue;}
+
+#areas-atuacao{background-color: #fff;padding: 15px 10px;margin-top: 20px;}
+#areas-atuacao ul{margin-bottom: 0;margin-left: 0 !important;list-style: none;}
+#areas-atuacao li{
+    border-bottom: #eee 1px solid;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    margin-bottom: 2px;
+    font-size: .4em;
+    font-weight: bold;
+}
+
+#formulario {width: 310px;float: left;margin-right: 40px;}
+#formulario input{width: 310px}
+
+#fb-like{background-color: #fff;margin-top: 20px;}
+
+#interna .single h2{margin-bottom: 20px;}
+#interna span.data{display: block;margin-bottom: 0}
+
+
+#page.agenda h2{
+    background-color: inherit;
+    color: #27ade3;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 10px 0 0;
+    border-bottom: #ccc 1px solid;
+    margin-bottom: 20px;
+}
+#page.agenda h2 strong{color: #27ade3;border-bottom: #27ade3 4px solid;}
+
+#page.agenda .linha{
+    min-height: 100px;position: relative;
+}
+
+#page.agenda .data{
+    width: 70px;color: #27ade3;text-transform: uppercase;
+    margin: 0 20px 0 0;
+    text-align: center;
+    position: absolute;
+}
+#page.agenda .data .data-diasemana{border-bottom: #27ade3 1px solid;font-size: 15px;}
+#page.agenda .data .data-dia{margin-top: 15px;font-size: 60px;line-height: 0.8em;}
+
+#page.agenda .shows{padding-left: 90px;position: relative;}
+#page.agenda .shows li{border-left: #ccc 1px solid;min-height: 150px;border-bottom: #efefef 1px solid;padding-bottom: 15px;}
+#page.agenda .shows img{margin-left: 20px;position: relative;top: -5px;margin-bottom: 0;}
+#page.agenda .shows h3{
+    position: inherit;top: inherit;left: inherit;
+    color: #27ade3;font-size: 20px;text-transform: uppercase;
+    font-weight: bold;margin-bottom: 15px;
+}
+#page.agenda .shows p{font-size: 13px;margin-bottom: 10px;}
+#page.agenda .shows a{color: #00aeef;font-weight: bold;margin-top: 15px;display: block;}
+#page.agenda .evento-image{position: relative;top: 6px;display: inherit !important;width: 170px;margin-top: 0 !important;float: left;}
+#page.agenda .evento-detalhe{padding-left: 190px}
+
+
+#page.single.agenda h2{
+    background-color: inherit;
+    color: #27ade3;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 10px 0 0;
+    border-bottom: #ccc 1px solid;
+    margin-bottom: 20px;
+}
+#page.single.agenda  a{color: #00aeef;}
+
+.orbit-container {
+    min-height: 326px;
+}
