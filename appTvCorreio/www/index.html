@@ -1,0 +1,211 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>EasyMobile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link href="styles/kendo.common.min.css" rel="stylesheet" />
+        <link href="styles/kendo.default.min.css" rel="stylesheet" />
+        <link href="styles/kendo.mobile.all.min.css" rel="stylesheet" />
+        <link href="styles/jquery.gridster.min.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+
+        <link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+        <script type="text/javascript">
+            var IS_PHONEGAP = false;
+        </script>
+
+        <!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script> -->
+        <script type="text/javascript" charset="utf-8" src="js/lib/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/lib/kendo.all.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/lib/kendo.culture.pt-BR.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/lib/jquery.gridster.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/functions.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/intro.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/login.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/menu.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/detalhe.js"></script>
+    </head> 
+    <body> 
+
+        <div data-role="view" id="intro" data-title="Bem-vindo!" data-init='loadApp'>
+            <div data-role="content" id="intro-content">
+                <br /><br /><br /><br /><br />
+                <center><img src="img/logo.png" width="80%" /></center>
+                <br /><br /><br /><br /><br /><br /><br /><br />
+                <center><img src="img/digivox.png" width="50%" /></center>
+            </div>
+        </div>
+
+        <div data-role="view" id="login" data-title="Login" data-show="onShowLogin">
+            <div data-role="header">
+                <div data-role="navbar">
+                    <img src="img/logomini.png" data-align="left" id="image-header-navbar" />
+                    <a data-align="right" data-role="button" id="help-button" href="#help">?</a>
+                </div>
+            </div>
+            <form id="form-login" action="">
+                <label for="username">LOGIN</label>
+                <input type="text" id="username" name="username" class="campo" />
+                <br />
+                <label for="senha">SENHA</label>
+                <input type="password" id="password" name="password"  class="campo" />
+                <a data-role="button" class="button" id="button-login" data-click="onButtonLogin">ENTRAR</a>
+            </form>
+            <br /><br /><br /><br /><br />
+            <center><img src="img/digivox.png" width="50%" /></center>
+        </div>
+
+        <div data-role="view" id="menu" data-title="Menu" data-init="initMenu">
+            <div data-role="header">
+                <div data-role="navbar">
+                    <img src="img/logomini.png" data-align="left" id="image-header-navbar" />
+                    <a data-align="right" data-role="button" class="header-navbar-button" href="#login">sair</a>
+                </div>
+            </div>
+            <div id="perfil">
+                <img src="img/perfil.png" width="100" />
+                <h1>Olá</h1>
+                <h2>Fábio Henrique</h2>
+                <div class="clear"></div>
+
+            </div>
+            <div class="gridster">
+                <ul>
+                </ul>
+            </div>
+            <footer data-role="footer">
+                <div data-role="navbar" class="footer-bar">
+                    <a data-role="button" data-align="left" class="footer-button chat">easy <strong>chat</strong> <img src="img/icon-chat-m.png" class="footer-button-icon" /></a>
+                    <a data-role="button" data-align="right" class="footer-button call" data-rel="modalview" href="#easy-call">easy <strong>call</strong> <img src="img/icon-call-m.png" class="footer-button-icon" /></a>
+                </div>
+            </footer>
+        </div>
+
+        <div data-role="view" data-title="Problemas Técnicos" id='problemas-tecnicos'>
+            <div data-role="header">
+                <div data-role="navbar">
+                    <img src="img/logomini.png" data-align='left' id="image-header-navbar" />
+                    <a data-align="right" data-role="button" class="header-navbar-button" href="#menu">início</a>
+                    <a data-align="right" data-role="backbutton" class="header-navbar-button">voltar</a>
+                </div>
+            </div>
+
+            <div class='container-content'>
+                <img src="img/icons-set/icon-header-problemastecnicos32.png" class="icon-header-content" />
+                <h1>Problemas Técnicos</h1>
+                <h2>Qual o serviço que está apresentando problemas?</h2>
+
+                <div class="hr"></div>
+
+                <form>
+                    <ul>
+                        <li><input type="radio" name="resposta" value="1" checked> internet</li>
+                        <li><input type="radio" name="resposta" value="2"> tv</li>
+                        <li><input type="radio" name="resposta" value="3"> telefone fixo</li>
+                        <li><input type="radio" name="resposta" value="4"> telefone móvel</li>
+                    </ul>
+                    <a data-role="button" class="button verde" href='#problemas-tecnicos-detalhe'>AVANÇAR</a>
+                </form>
+            </div>
+
+            <footer data-role="footer">
+                <div data-role="navbar" class="footer-bar">
+                    <a data-role="button" data-align="left" class="footer-button chat">easy <strong>chat</strong> <img src="img/icon-chat-m.png" class="footer-button-icon" /></a>
+                    <a data-role="button" data-align="right" class="footer-button call" data-rel="modalview" href="#easy-call">easy <strong>call</strong> <img src="img/icon-call-m.png" class="footer-button-icon" /></a>
+                </div>
+            </footer>
+        </div>
+
+        <div data-role="view" data-title="Problemas Técnicos - Detalhe" id='problemas-tecnicos-detalhe'>
+            <div data-role="header">
+                <div data-role="navbar">
+                    <img src="img/logomini.png" data-align='left' id="image-header-navbar" />
+                    <a data-align="right" data-role="button" class="header-navbar-button" href="#menu">início</a>
+                    <a data-align="right" data-role="backbutton" class="header-navbar-button">voltar</a>
+                </div>
+            </div>
+
+            <div class='container-content'>
+                <img src="img/icons-set/icon-header-problemastecnicos32.png" class="icon-header-content" />
+                <h1>Problemas Técnicos</h1>
+                <h2>TV</h2>
+
+                <div class="hr"></div>
+
+                <ul class="respostas">
+                    <li>
+                        <h3>Sinal Fraco ou inesistente?</h3>
+                        <a data-role="button" data-align="left" data-click="onTextButtonClick" class="action-button texto"><img src="img/icon-text.png" /></a>
+                        <a data-role="button" data-align="left" data-click="onVideoButtonClick" class="action-button video"><img src="img/icon-video.png" /></a>
+                        <div class="texto-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique iaculis adipiscing. 
+                                Duis congue ut justo non tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
+                                posuere cubilia Curae; Mauris ultricies lorem a felis rutrum viverra. Sed sit amet ligula mollis, varius 
+                                elit viverra, mattis felis. Mauris sit amet porta mauris, in interdum erat. Sed varius congue lorem ac 
+                                pulvinar. Donec nunc sem, accumsan sagittis sagittis et, sodales quis dui.</p>
+                            <p>Duis eget nisl purus. In nisl nibh, bibendum eget augue vel, sollicitudin lobortis arcu. Aenean facilisis, 
+                                risus id viverra tincidunt, magna mauris tempor tortor, nec egestas metus ligula quis urna. Nullam 
+                                elementum sapien at arcu pharetra, faucibus vehicula velit tincidunt. Nunc fermentum ipsum quis facilisis 
+                                lobortis. Maecenas pulvinar euismod tortor sit amet imperdiet. Quisque pellentesque risus volutpat, 
+                                laoreet lectus eu, molestie sapien. Pellentesque quis nunc vitae nisl tincidunt tempor a sit amet libero. 
+                                Quisque purus dolor, gravida at massa quis, tempus semper ligula. Aenean posuere, augue vitae interdum 
+                                mattis, augue massa sollicitudin justo, et rhoncus neque magna vitae nulla.</p>
+                        </div>
+                        <div class="video-content">
+                            <iframe height="200" src="http://www.youtube.com/embed/j1ck_1WUfhY?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Ruído na imagem?</h3>
+                        <a data-role="button" data-align="left" data-click="onTextButtonClick" class="action-button texto"><img src="img/icon-text.png" /></a>
+                        <a data-role="button" data-align="left" data-click="onVideoButtonClick" class="action-button video"><img src="img/icon-video.png" /></a>
+                        <div class="texto-content">
+                            <p>Sed a mauris ut quam ultrices cursus. Mauris metus felis, commodo sed nunc ac, porttitor cursus risus. Sed quam tortor, ornare eu urna vel, sodales convallis nulla. Ut ornare purus non metus cursus, id scelerisque tellus faucibus. Morbi auctor orci eget iaculis fermentum. Nulla ac mollis lorem, ut scelerisque nulla. Aliquam in tempus leo.</p>
+                            <p>Morbi dictum leo nec ante sodales suscipit. Pellentesque a dapibus odio. Aenean ultrices fringilla vestibulum. Mauris elementum mauris vel nunc aliquet posuere. Donec dignissim commodo sem. Vestibulum id hendrerit odio. Aliquam ultricies nisl ipsum. Aenean nec ligula sed nunc dignissim vulputate rutrum non leo. Ut ac consectetur urna. Nulla condimentum mi ut libero congue, a eleifend tellus vehicula. Mauris elementum lectus est, nec venenatis elit venenatis at. Donec blandit est turpis. Nullam magna sapien, porta in adipiscing et, aliquam sit amet diam. Integer sed blandit mi. Ut mauris augue, laoreet quis elit non, porttitor viverra augue.</p>
+                        </div>
+                        <div class="video-content">
+                            <iframe height="180" src="http://www.youtube.com/embed/xO-wTGYmVjQ?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Pode desligar da tomada?</h3>
+                        <a data-role="button" data-align="left" data-click="onTextButtonClick" class="action-button texto"><img src="img/icon-text.png" /></a>
+                        <div class="texto-content">
+                            <p>In et imperdiet magna. Morbi eget mollis tortor. Nulla nec fringilla quam, vitae vestibulum justo. Phasellus nibh lacus, rhoncus varius magna eget, scelerisque molestie sem. Nam laoreet, eros a scelerisque pulvinar, nisl orci tincidunt nisl, at convallis mauris tellus interdum tellus. Fusce neque purus, suscipit ac pulvinar sollicitudin, vestibulum nec felis. Nullam mauris mauris, condimentum id lorem sed, ultrices tincidunt orci. Nullam pulvinar lacus et nulla ultrices commodo. Mauris cursus, ante et venenatis consectetur, odio dui gravida quam, at mollis diam neque in enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam feugiat nunc euismod placerat convallis. Sed id lacus semper, laoreet purus a, posuere mauris. Morbi volutpat diam in turpis imperdiet, ac pulvinar nulla facilisis. Cras nec turpis consequat, pharetra libero tempor, tincidunt ante.</p>
+                            <p>Donec sapien nibh, tristique sit amet purus et, congue luctus est. Sed id felis semper, dignissim velit quis, condimentum purus. Nunc interdum magna ac mi tempor semper. Phasellus non imperdiet lacus. Pellentesque sed dui tortor. In hac habitasse platea dictumst. Nam mollis turpis quis semper tincidunt. Duis euismod magna eu lorem auctor, ut tincidunt sapien hendrerit. Proin commodo cursus turpis id ultricies.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <footer data-role="footer">
+                <div data-role="navbar" class="footer-bar">
+                    <a data-role="button" data-align="left" class="footer-button chat">easy <strong>chat</strong> <img src="img/icon-chat-m.png" class="footer-button-icon" /></a>
+                    <a data-role="button" data-align="right" class="footer-button call" data-rel="modalview" href="#easy-call">easy <strong>call</strong> <img src="img/icon-call-m.png" class="footer-button-icon" /></a>
+                </div>
+            </footer>
+        </div>
+
+        <div data-role="modalview" id="easy-call" class="modal" style="width: 90%;">
+            <div class="topbar">
+                <span>easy <strong>call</strong></span>
+                <a data-role="button" class="modal-close" data-click="closeModalEasyCall" >X</a>
+            </div>
+            <div class="modal-content">
+                <img src="img/icon-atendente.png" class="modal-atendente" />
+                Olá,<br />
+                Em alguns minutos<br/>
+                ligaremos para o número:<br/>
+                (83) 9999-0010<br />
+            </div>
+            <div class="clear"></div>
+            <div style="margin-top: 20px;">
+                <a data-role="button" class="button verde left" data-click="confirmModalEasyCall">CONFIRMAR</a>
+                <a data-role="button" class="button vermelho right" data-click="closeModalEasyCall">CANCELAR</a>
+            </div>
+        </div>
+    </body>
+</html>
